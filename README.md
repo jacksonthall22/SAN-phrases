@@ -35,6 +35,6 @@ a valid SAN string, there is a hierarchy of custom `Error` and `Warning` types w
 no way to convert the phrase to SAN (ex. the move converted from the phrase is not legal in the position; there is missing information, ex. disambiguator or 
 promotion piece; or the sequence of tokens in the phrase could otherwise not be parsed). A `Warning` type is raised if the phrase can be narrowed down to 
 exactly one legal move, but any of the following are true:
-- The user says "check"/"checkmate"/"stalemate" but the move is not check/checkmate/stalemate (or vice versa)
-- The user says "takes" but the move is not a capture (or vice versa)
-- The user over-disambiguated (ex. "knight b d 7" when "knight d 7" would suffice)
+- The user says `check`/`checkmate`/`stalemate` but the move is not check/checkmate/stalemate (or vice versa)
+- The user says `takes` but the move is not a capture (or vice versa)
+- The user over-disambiguated (ex. `knight b d 7` when `knight d 7` would suffice)
