@@ -25,7 +25,7 @@ There are even more cases to consider if the move delivers check, for example `N
 - `knight takes check` (if there is no other way for a knight to make a capture and deliver check)
 - `knight takes pawn check` (if there is no other way for a knight to take a pawn and deliver check)
 
-The Python 3.10 `match` statement comes to the rescue here. I'll skip the detailed analysis of the logic behind each one here. If you want to
+The Python 3.10 `match` statement comes to the rescue here. I'll skip the detailed analysis of the logic behind each heuristic. If you want to
 fully understand the logic I have implemented, it's probably best to comb through the various `case` statements in `phrase_to_san.py`. Each one
 is a noodle in a great big bowl of spaghetti.
 
