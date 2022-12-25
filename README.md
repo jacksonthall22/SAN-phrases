@@ -17,13 +17,17 @@ following ways:
 
 In each case above, it is also necessary to make sure another knight cannot take on `f7`.
 
-There are even more cases, for example if the move delivers check (`Nxf7+`):
+There are even more cases to consider if the move delivers check, for example `Nxf7+`:
 - `knight takes f 7 check` (the verbatim spoken SAN)
 - `check` (if there is no other way to deliver check)
 - `takes check` (if there is no other way to capture and deliver check)
 - `takes pawn check` (if there is no other way to capture a pawn and deliver check)
 - `knight takes check` (if there is no other way for a knight to make a capture and deliver check)
 - `knight takes pawn check` (if there is no other way for a knight to take a pawn and deliver check)
+
+The Python 3.10 `match` statement comes to the rescue here. I'll skip the detailed analysis of the logic behind each one here. If you want to
+fully understand the logic I have implemented, it's probably best to comb through the various `case` statements in `phrase_to_san.py`. Each one
+is a noodle in a great big bowl of spaghetti.
 
 ## Error Checking
 While converting a phrase to SAN using the state of a `chess.Board`, this program does quite a bit of validation. In cases where we cannot simply return
